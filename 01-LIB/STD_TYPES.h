@@ -53,5 +53,6 @@ typedef signed long long 		sint64_t;
 #define Null_pointer 0
 #define OK 1
 #define NOK 0
-
+#define BUSY	3
+#define IDLE	1
 #endif
