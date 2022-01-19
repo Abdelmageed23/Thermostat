@@ -201,7 +201,7 @@ void LCD_vidClear(void)
 }
 }
 
-//*******  Private Functions ********
+//*******  PRIVATE FUNCTIONS IMPLMENTATION ********
 static void delay(uint16_t max)
 {
 	uint16_t counter = 0;
