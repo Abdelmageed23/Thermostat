@@ -10,9 +10,13 @@ RM := rm -rf
 -include sources.mk
 -include 04-APP/subdir.mk
 -include 03-HAL/motor/subdir.mk
+-include 03-HAL/TEMP/subdir.mk
 -include 03-HAL/LCD/subdir.mk
+-include 03-HAL/KEYPAD/subdir.mk
 -include 02-MCAL/TIMER/subdir.mk
 -include 02-MCAL/PWM/subdir.mk
+-include 02-MCAL/DIO/subdir.mk
+-include 02-MCAL/ADC/subdir.mk
 -include 01-LIB/DET/subdir.mk
 -include subdir.mk
 -include objects.mk
