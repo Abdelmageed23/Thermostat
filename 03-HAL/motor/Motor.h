@@ -20,8 +20,10 @@ MOTOR 2 DIR B PIN 7
 #define MOTOR_1 0
 #define MOTOR_2 1
 /**MACROS FOR USAGE IN DIR***/
-#define FWD HIGH
-#define REV LOW
+#define FWD 1
+#define REV 0
+
+
 
 void MOTOR_init(uint8_t numMotor);// numMotor (initialize Direction pins only (PWM initializes enable pins inside them))
 void MOTOR_speed(uint8_t dutyCycle);//  30/60/90 (Start PWM and initialize duty cycle)

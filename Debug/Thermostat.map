@@ -1,0 +1,493 @@
+Archive member included because of file (symbol)
+
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                              ./03-HAL/LCD/LCD.o (__mulsi3)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                              ./03-HAL/LCD/LCD.o (__udivmodsi4)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                              c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o (exit)
+c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                              ./03-HAL/LCD/LCD.o (__do_clear_bss)
+
+Allocating common symbols
+Common symbol       size              file
+
+gu8arr_error        0x64              ./03-HAL/LCD/LCD.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00020000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+LOAD ./04-APP/APP_Program.o
+LOAD ./03-HAL/motor/Motor.o
+LOAD ./03-HAL/LCD/LCD.o
+LOAD ./02-MCAL/TIMER/Timer.o
+LOAD ./02-MCAL/PWM/PWM.o
+LOAD ./01-LIB/DET/Det.o
+LOAD ./main.o
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5\libc.a
+LOAD c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000      0xad4
+ *(.vectors)
+ .vectors       0x00000000       0x54 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x00000054                . = ALIGN (0x2)
+                0x00000054                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x00000054        0x0 linker stubs
+ *(.trampolines*)
+                0x00000054                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x00000054                __ctors_start = .
+ *(.ctors)
+                0x00000054                __ctors_end = .
+                0x00000054                __dtors_start = .
+ *(.dtors)
+                0x00000054                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x00000054        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+                0x00000054                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x00000054        0xc c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x00000060       0x10 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00000060                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000070        0x8 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+ *(.init9)
+ *(.text)
+ .text          0x00000078        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+                0x00000078                __vector_1
+                0x00000078                __vector_12
+                0x00000078                __bad_interrupt
+                0x00000078                __vector_6
+                0x00000078                __vector_3
+                0x00000078                __vector_13
+                0x00000078                __vector_17
+                0x00000078                __vector_19
+                0x00000078                __vector_7
+                0x00000078                __vector_5
+                0x00000078                __vector_4
+                0x00000078                __vector_9
+                0x00000078                __vector_2
+                0x00000078                __vector_15
+                0x00000078                __vector_8
+                0x00000078                __vector_14
+                0x00000078                __vector_16
+                0x00000078                __vector_18
+                0x00000078                __vector_20
+ .text          0x0000007c        0x0 ./04-APP/APP_Program.o
+ .text          0x0000007c        0x0 ./03-HAL/motor/Motor.o
+ .text          0x0000007c        0x0 ./03-HAL/LCD/LCD.o
+ .text          0x0000007c        0x0 ./02-MCAL/TIMER/Timer.o
+ .text          0x0000007c        0x0 ./02-MCAL/PWM/PWM.o
+ .text          0x0000007c        0x0 ./01-LIB/DET/Det.o
+ .text          0x0000007c        0x0 ./main.o
+ .text          0x0000007c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .text          0x0000007c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .text          0x0000007c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text          0x0000007c        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x0000007c                . = ALIGN (0x2)
+ *(.text.*)
+ .text.APP_init
+                0x0000007c       0x1e ./04-APP/APP_Program.o
+                0x0000007c                APP_init
+ .text.APP_Prog
+                0x0000009a       0x12 ./04-APP/APP_Program.o
+                0x0000009a                APP_Prog
+ .text.MOTOR_init
+                0x000000ac       0x4e ./03-HAL/motor/Motor.o
+                0x000000ac                MOTOR_init
+ .text.MOTOR_speed
+                0x000000fa       0x1a ./03-HAL/motor/Motor.o
+                0x000000fa                MOTOR_speed
+ .text.MOTOR_direction
+                0x00000114       0x92 ./03-HAL/motor/Motor.o
+                0x00000114                MOTOR_direction
+ .text.MOTOR_off
+                0x000001a6       0x4a ./03-HAL/motor/Motor.o
+                0x000001a6                MOTOR_off
+ .text.LCD_vidInit
+                0x000001f0       0x96 ./03-HAL/LCD/LCD.o
+                0x000001f0                LCD_vidInit
+ .text.LCD_vidWriteCommand
+                0x00000286      0x128 ./03-HAL/LCD/LCD.o
+                0x00000286                LCD_vidWriteCommand
+ .text.LCD_vidWriteData
+                0x000003ae      0x128 ./03-HAL/LCD/LCD.o
+                0x000003ae                LCD_vidWriteData
+ .text.LCD_vidWriteString
+                0x000004d6       0x76 ./03-HAL/LCD/LCD.o
+                0x000004d6                LCD_vidWriteString
+ .text.LCD_vidWriteNumber
+                0x0000054c      0x14e ./03-HAL/LCD/LCD.o
+                0x0000054c                LCD_vidWriteNumber
+ .text.LCD_vidSetPosition
+                0x0000069a       0x70 ./03-HAL/LCD/LCD.o
+                0x0000069a                LCD_vidSetPosition
+ .text.LCD_vidClear
+                0x0000070a       0x2e ./03-HAL/LCD/LCD.o
+                0x0000070a                LCD_vidClear
+ .text.delay    0x00000738       0x3c ./03-HAL/LCD/LCD.o
+ .text.TIMER_vidTimer0Init
+                0x00000774       0x22 ./02-MCAL/TIMER/Timer.o
+                0x00000774                TIMER_vidTimer0Init
+ .text.TIMER_vidTimer0Start
+                0x00000796       0x28 ./02-MCAL/TIMER/Timer.o
+                0x00000796                TIMER_vidTimer0Start
+ .text.TIMER_vidTimer0Stop
+                0x000007be       0x1c ./02-MCAL/TIMER/Timer.o
+                0x000007be                TIMER_vidTimer0Stop
+ .text.TIMER_u8Timer0_OVFflag
+                0x000007da       0x16 ./02-MCAL/TIMER/Timer.o
+                0x000007da                TIMER_u8Timer0_OVFflag
+ .text.TIMER_u8Timer0_CTCflag
+                0x000007f0       0x18 ./02-MCAL/TIMER/Timer.o
+                0x000007f0                TIMER_u8Timer0_CTCflag
+ .text.TIMER_vidTimer0SetInitValue
+                0x00000808       0x24 ./02-MCAL/TIMER/Timer.o
+                0x00000808                TIMER_vidTimer0SetInitValue
+ .text.SetCallBack_Timer0CTC
+                0x0000082c       0x24 ./02-MCAL/TIMER/Timer.o
+                0x0000082c                SetCallBack_Timer0CTC
+ .text.SetCallBack_Timer0OVF
+                0x00000850       0x24 ./02-MCAL/TIMER/Timer.o
+                0x00000850                SetCallBack_Timer0OVF
+ .text.__vector_10
+                0x00000874       0x66 ./02-MCAL/TIMER/Timer.o
+                0x00000874                __vector_10
+ .text.__vector_11
+                0x000008da       0x70 ./02-MCAL/TIMER/Timer.o
+                0x000008da                __vector_11
+ .text.PWM_vidInit
+                0x0000094a       0x34 ./02-MCAL/PWM/PWM.o
+                0x0000094a                PWM_vidInit
+ .text.PWM_vidstart
+                0x0000097e       0x5a ./02-MCAL/PWM/PWM.o
+                0x0000097e                PWM_vidstart
+ .text.PWM_SetDutyCycle
+                0x000009d8       0x1a ./02-MCAL/PWM/PWM.o
+                0x000009d8                PWM_SetDutyCycle
+ .text.Det_ReportError
+                0x000009f2       0x4e ./01-LIB/DET/Det.o
+                0x000009f2                Det_ReportError
+ .text.main     0x00000a40        0xe ./main.o
+                0x00000a40                main
+ .text.libgcc   0x00000a4e       0x3e c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+                0x00000a4e                __mulsi3
+ .text.libgcc   0x00000a8c       0x44 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x00000a8c                __udivmodsi4
+ .text.libgcc   0x00000ad0        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00000ad0        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+                0x00000ad0                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x00000ad0        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00000ad0                exit
+                0x00000ad0                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x00000ad0        0x4 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ *(.fini0)
+                0x00000ad4                _etext = .
+
+.data           0x00800060        0x0 load address 0x00000ad4
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+ .data          0x00800060        0x0 ./04-APP/APP_Program.o
+ .data          0x00800060        0x0 ./03-HAL/motor/Motor.o
+ .data          0x00800060        0x0 ./03-HAL/LCD/LCD.o
+ .data          0x00800060        0x0 ./02-MCAL/TIMER/Timer.o
+ .data          0x00800060        0x0 ./02-MCAL/PWM/PWM.o
+ .data          0x00800060        0x0 ./01-LIB/DET/Det.o
+ .data          0x00800060        0x0 ./main.o
+ .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800060                . = ALIGN (0x2)
+                0x00800060                _edata = .
+                0x00800060                PROVIDE (__data_end, .)
+
+.bss            0x00800060       0x6d
+                0x00800060                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm16.o
+ .bss           0x00800060        0x0 ./04-APP/APP_Program.o
+ .bss           0x00800060        0x0 ./03-HAL/motor/Motor.o
+ .bss           0x00800060        0x0 ./03-HAL/LCD/LCD.o
+ .bss           0x00800060        0x0 ./02-MCAL/TIMER/Timer.o
+ .bss           0x00800060        0x0 ./02-MCAL/PWM/PWM.o
+ .bss           0x00800060        0x0 ./01-LIB/DET/Det.o
+ .bss           0x00800060        0x0 ./main.o
+ .bss           0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mulsi3.o)
+ .bss           0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .bss           0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x00800060        0x0 c:/winavr-20100110/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_clear_bss.o)
+ *(.bss*)
+ .bss.LCD_Status
+                0x00800060        0x1 ./03-HAL/LCD/LCD.o
+ .bss.CallBack_Timer0CTC
+                0x00800061        0x2 ./02-MCAL/TIMER/Timer.o
+ .bss.CallBack_Timer0OVF
+                0x00800063        0x2 ./02-MCAL/TIMER/Timer.o
+ .bss.gu8_intial_value
+                0x00800065        0x1 ./02-MCAL/TIMER/Timer.o
+ .bss.PWM_timer_count
+                0x00800066        0x1 ./02-MCAL/PWM/PWM.o
+ .bss.PWM_dutyCycle
+                0x00800067        0x1 ./02-MCAL/PWM/PWM.o
+ .bss.index_row
+                0x00800068        0x1 ./01-LIB/DET/Det.o
+ *(COMMON)
+ COMMON         0x00800069       0x64 ./03-HAL/LCD/LCD.o
+                0x00800069                gu8arr_error
+                0x008000cd                PROVIDE (__bss_end, .)
+                0x00000ad4                __data_load_start = LOADADDR (.data)
+                0x00000ad4                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x008000cd        0x0
+                0x008000cd                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x008000cd                PROVIDE (__noinit_end, .)
+                0x008000cd                _end = .
+                0x008000cd                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab           0x00000000     0x16e0
+ *(.stab)
+ .stab          0x00000000      0x210 ./04-APP/APP_Program.o
+ .stab          0x00000210      0x390 ./03-HAL/motor/Motor.o
+                                0x39c (size before relaxing)
+ .stab          0x000005a0      0x7bc ./03-HAL/LCD/LCD.o
+                                0x7c8 (size before relaxing)
+ .stab          0x00000d5c      0x3f0 ./02-MCAL/TIMER/Timer.o
+                                0x3fc (size before relaxing)
+ .stab          0x0000114c      0x2ac ./02-MCAL/PWM/PWM.o
+                                0x2b8 (size before relaxing)
+ .stab          0x000013f8      0x1ec ./01-LIB/DET/Det.o
+                                0x1f8 (size before relaxing)
+ .stab          0x000015e4       0xfc ./main.o
+                                0x108 (size before relaxing)
+
+.stabstr        0x00000000      0x98e
+ *(.stabstr)
+ .stabstr       0x00000000      0x98e ./04-APP/APP_Program.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(Thermostat.elf elf32-avr)
+LOAD linker stubs
