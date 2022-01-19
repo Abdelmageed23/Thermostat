@@ -6,7 +6,7 @@
 #include "../../01-LIB/STD_TYPES.h"
 #include "../../01-LIB/BIT_MATH.h"
 #include "../../01-LIB/DET/Det.h"
-#include "../DIO/DIO_interface.h"
+#include "../../02-MCAL/DIO/DIO_interface.h"
 #include "LCD_cfg.h"
 #include "LCD.h"
 

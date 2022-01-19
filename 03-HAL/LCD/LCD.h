@@ -34,7 +34,7 @@ void LCD_vidInit(void);
 void LCD_vidWriteCommand(uint8_t command);
 void LCD_vidWriteData(uint8_t data);
 void LCD_vidWriteString(uint8_t*string);
-void LCD_vidWriteNumber(uint8_t num);
+void LCD_vidWriteNumber(uint32_t num);
 void LCD_vidSetPosition(uint8_t row,uint8_t col);
 void LCD_vidClear(void);
 
