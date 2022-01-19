@@ -1,6 +1,6 @@
-#include "STD_TYPES.h"
+#include "../../01-LIB/STD_TYPES.h"
 
-#include "DIO_interface.h"
+#include "../../02-MCAL/DIO/DIO_interface.h"
 
 #include "KEYPAD_config.h"
 #include "KEYPAD_private.h"
