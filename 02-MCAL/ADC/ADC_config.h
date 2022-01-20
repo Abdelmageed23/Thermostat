@@ -9,7 +9,7 @@
 /*Select ADLAR:
  	 	 	 	 1- LEFT_ADJUST
  	 	 	 	 2- RIGHT_ADJUST*/
-#define ADC_ADLAR_SEL		LEFT_ADJUST
+#define ADC_ADLAR_SEL		RIGHT_ADJUST
 
 /*Select Analog Channel:
  	 	 	 	 	 	 1- ADC0
