@@ -1,6 +1,8 @@
 #include "../../01-LIB/BIT_MATH.h"
 #include "../../01-LIB/STD_TYPES.h"
 
+#include "../DIO/DIO_register.h"
+
 #include "ADC_register.h"
 #include "ADC_config.h"
 #include "ADC_private.h"
@@ -12,6 +14,7 @@ void(*CallbackNotification)(void);
 
 void ADC_init(void)
 {
+	CLR_BIT(DDRA,0);
 	/*Select Ref.*/
 #if ADC_REF_SEL == ADC_AREF
 	CLR_BIT(ADC_ADMUX,ADMUX_REFS0);

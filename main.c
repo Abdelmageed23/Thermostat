@@ -9,7 +9,10 @@
 #include "04-APP/APP_Interface.h";
 
 
-void main()
+int  main()
 {
+	 APP_init();
+	 APP_Prog();
 
+	 return 0;
 }

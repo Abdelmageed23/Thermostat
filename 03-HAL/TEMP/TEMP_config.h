@@ -6,4 +6,7 @@
  	 	 	 	 	 2- RES_10bit*/
 #define TWO_P_RESOLUTION	RES_8bit
 
+/*Select Channel*/
+#define ADC_Channel		0
+
 #endif

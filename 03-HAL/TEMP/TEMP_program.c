@@ -1,12 +1,18 @@
 #include "../../01-LIB/STD_TYPES.h"
 
+//#include "../ADC_interface.h"
 #include "../../02-MCAL/ADC/ADC_interface.h"
-
 #include "TEMP_private.h"
 #include "TEMP_config.h"
 #include "TEMP_interface.h"
 
-uint8_t TEMP_u8GetReading(uint8_t ADC_Channel)
+void TEMP_init(void)
+{
+	DIO_SETpinDir(DIO_PORTA,ADC_Channel,DIO_INPUT);
+	ADC_init();
+}
+
+uint8_t TEMP_u8GetReading(void)
 {
 	uint8_t local_u8TEMP;
 	uint16_t local_u16MiliVolt;
