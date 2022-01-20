@@ -8,10 +8,11 @@
 
 void TEMP_init(void)
 {
+	DIO_SETpinDir(DIO_PORTA,ADC_Channel,DIO_INPUT);
 	ADC_init();
 }
 
-uint8_t TEMP_u8GetReading(uint8_t ADC_Channel)
+uint8_t TEMP_u8GetReading(void)
 {
 	uint8_t local_u8TEMP;
 	unint16_t local_u16MiliVolt;

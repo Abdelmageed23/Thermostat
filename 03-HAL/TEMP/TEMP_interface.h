@@ -3,6 +3,6 @@
 
 void TEMP_init(void);
 
-uint8_t TEMP_u8GetReading(uint8_t ADC_Channel);
+uint8_t TEMP_u8GetReading(void);
 
 #endif
