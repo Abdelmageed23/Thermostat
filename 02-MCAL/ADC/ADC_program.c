@@ -7,6 +7,7 @@
 #include "ADC_interface.h"
 
 uint8_t* gu8_Reading;
+uint16_t* gu8_ReadingL;
 uint8_t gu8_State=IDLE;
 void(*CallbackNotification)(void);
 
@@ -73,7 +74,7 @@ uint8_t ADC_u8StartConversionSynch(uint8_t ADC_Channel,uint8_t* u8_Reading)
 			}
 			else if(ADC_ADLAR_SEL == RIGHT_ADJUST)
 			{
-				*u8_Reading=ADC_ADCL;
+				*gu8_ReadingL=ADC_ADCL;
 				gu8_State=IDLE;
 			}
 		}
@@ -129,7 +130,7 @@ void __vector_16(void)
 	}
 	else if(ADC_ADLAR_SEL == RIGHT_ADJUST)
 	{
-		*gu8_Reading=ADC_ADCL;
+		*gu8_ReadingL=ADC_ADCL;
 	}
 
 	/*ADC state IDLE*/
