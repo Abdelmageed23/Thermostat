@@ -9,7 +9,7 @@
 #include "../01-LIB/BIT_MATH.h"
 
 #include "../02-MCAL/Interrupt/Interrupt_interface.h"
-#include "../02-MCAL/ADC/ADC_interface.h"
+//#include "../02-MCAL/ADC/ADC_interface.h"
 
 #include "../03-HAL/LCD/LCD.h"
 #include "../03-HAL/motor/Motor.h"
@@ -114,33 +114,38 @@ void APP_Prog()
 		case GET:
 		//	LCD_vidClear();
 			LCD_vidSetPosition(0,0);
-			LCD_vidWriteString("Actual Temp:");
-			LCD_vidSetPosition(0,14);
+			LCD_vidWriteString("Act. Temp:");
+			LCD_vidSetPosition(0,11);
 			LCD_vidWriteString("  ");
 
-			LCD_vidSetPosition(0,14);
+			LCD_vidSetPosition(0,11);
 			LCD_vidWriteNumber(Actual_Temp);
 			LCD_vidSetPosition(1,0);
-			LCD_vidWriteString("Desired Temp:");
-			LCD_vidSetPosition(1,14);
+			LCD_vidWriteString("Des. Temp:");
+			LCD_vidSetPosition(1,11);
 			LCD_vidWriteNumber(desired_temp);
 
 
 			Actual_Temp = TEMP_u8GetReading();// 0 = ADC channel   ** NEEDED
-			LCD_vidWriteNumber(Actual_Temp);
+			//LCD_vidWriteNumber(Actual_Temp);
 			for(volatile uint32_t delay; delay<20000000;delay++);
 			key =KPD_u8GetPressedKey();
 
 			if(desired_temp>Actual_Temp)
 					{
 						MOTOR_off(MOTOR_1);
+						LCD_vidSetPosition(0,14);
+						LCD_vidWriteString("M");
+						LCD_vidWriteNumber(0);
 					}
 					else if ((Actual_Temp -desired_temp)<4 &&(Actual_Temp -desired_temp)>0)
 
 					{
 						MOTOR_speed(20);
 						MOTOR_direction(MOTOR_1,FWD);
-
+						LCD_vidSetPosition(0,14);
+						LCD_vidWriteString("M");
+						LCD_vidWriteNumber(1);
 
 					}
 					else if ( ((Actual_Temp -desired_temp)<8 ) && ((Actual_Temp -desired_temp)>4))
@@ -149,13 +154,18 @@ void APP_Prog()
 						MOTOR_direction(MOTOR_1,FWD);
 						MOTOR_speed(60);
 
-
+						LCD_vidSetPosition(0,14);
+						LCD_vidWriteString("M");
+						LCD_vidWriteNumber(2);
 					}
 					else if ( (Actual_Temp -desired_temp) >8 )
 
 					{
 						MOTOR_speed(90);
 						MOTOR_direction(MOTOR_1,FWD);
+						LCD_vidSetPosition(0,14);
+						LCD_vidWriteString("M");
+						LCD_vidWriteNumber(3);
 
 					}
 			if(BTN_u8IsPressed(BTN_1))	// NEED MODIFICATION TO HOME
